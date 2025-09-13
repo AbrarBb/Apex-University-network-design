@@ -1,0 +1,250 @@
+--------------------------------------
+enable
+configure terminal
+hostname R1
+
+!
+interface FastEthernet0/0
+ ip address 172.16.1.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+
+interface Serial2/0
+ ip address 10.0.0.1 255.255.255.252
+ no shutdown
+!
+interface Serial3/0
+ ip address 10.0.0.5 255.255.255.252
+ clock rate 64000
+ no shutdown
+
+!
+router ospf 1
+ network 172.16.1.0 0.0.0.255 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.0.4 0.0.0.3 area 0
+
+!
+end
+write memory
+------------------------------------------
+
+enable
+configure terminal
+hostname R2
+!
+interface FastEthernet0/0
+ ip address 172.16.2.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+interface Serial2/0
+ ip address 10.0.0.9 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+interface Serial3/0
+ ip address 10.0.0.6 255.255.255.252
+ no shutdown
+!
+router ospf 1
+ network 172.16.2.0 0.0.0.255 area 0
+ network 10.0.0.4 0.0.0.3 area 0
+ network 10.0.0.8 0.0.0.3 area 0
+!
+end
+write memory
+
+
+-----------------------------
+
+enable
+configure terminal
+hostname R3
+!
+interface FastEthernet0/0
+ ip address 172.16.3.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+interface Serial2/0
+ ip address 10.0.0.30 255.255.255.252
+ no shutdown
+!
+interface Serial3/0
+ ip address 10.0.0.33 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+router ospf 1
+ network 172.16.3.0 0.0.0.255 area 0
+ network 10.0.0.28 0.0.0.3 area 0
+ network 10.0.0.32 0.0.0.3 area 0
+!
+end
+write memory
+
+
+
+
+
+
+
+-------------------------------
+enable
+configure terminal
+hostname R4
+!
+interface FastEthernet0/0
+ ip address 172.16.4.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+interface Serial2/0
+ ip address 10.0.0.37 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+interface Serial3/0
+ ip address 10.0.0.34 255.255.255.252
+ no clock rate
+ no shutdown
+!
+router ospf 1
+ network 172.16.4.0 0.0.0.255 area 0
+ network 10.0.0.32 0.0.0.3 area 0
+ network 10.0.0.36 0.0.0.3 area 0
+!
+end
+write memory
+
+
+
+----------------------------------
+enable
+configure terminal
+hostname R5
+!
+interface FastEthernet0/0
+ ip address 172.16.5.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+interface Serial0/0/0
+ ip address 10.0.0.25 255.255.255.252
+ no clock rate 64000
+ no shutdown
+!
+interface Serial0/0/1
+ ip address 10.0.0.29 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+interface Serial0/1/0
+ ip address 10.0.0.38 255.255.255.252
+ no shutdown
+!
+router ospf 1
+ network 10.0.0.24 0.0.0.3 area 0
+ network 10.0.0.28 0.0.0.3 area 0
+ network 10.0.0.36 0.0.0.3 area 0
+!
+end
+write memory
+
+-----------------------------------
+enable
+configure terminal
+hostname R6
+!
+interface FastEthernet0/0
+ ip address 172.16.6.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+interface Serial2/0
+ ip address 10.0.0.21 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+interface Serial3/0
+ ip address 10.0.0.18 255.255.255.252
+ no clock rate 
+ no shutdown
+!
+router ospf 1
+ network 172.16.6.0 0.0.0.255 area 0
+ network 10.0.0.16 0.0.0.3 area 0
+ network 10.0.0.20 0.0.0.3 area 0
+!
+end
+write memory
+----------------------------------
+enable
+configure terminal
+hostname R7
+!
+interface FastEthernet0/0
+ ip address 172.16.7.1 255.255.255.0
+ ip helper-address 172.16.8.100
+ no shutdown
+!
+interface Serial2/0
+ ip address 10.0.0.14 255.255.255.252
+ no shutdown
+!
+interface Serial3/0
+ ip address 10.0.0.17 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+router ospf 1
+ network 172.16.7.0 0.0.0.255 area 0
+ network 10.0.0.12 0.0.0.3 area 0
+ network 10.0.0.16 0.0.0.3 area 0
+!
+end
+write memory
+----------------------------
+enable
+configure terminal
+hostname R8
+!
+interface FastEthernet0/0
+ ip address 172.16.8.1 255.255.255.0
+ no shutdown
+!
+interface Serial0/0/0
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+!
+interface Serial0/0/1
+ ip address 10.0.0.10 255.255.255.252
+ no shutdown
+!
+interface Serial0/1/0
+ ip address 10.0.0.13 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+interface Serial0/1/1
+ ip address 10.0.0.22 255.255.255.252
+ no shutdown
+!
+interface Serial0/2/0
+ ip address 10.0.0.26 255.255.255.252
+ clock rate 64000
+ no shutdown
+!
+router ospf 1
+ network 172.16.8.0 0.0.0.255 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.0.8 0.0.0.3 area 0
+ network 10.0.0.12 0.0.0.3 area 0
+ network 10.0.0.20 0.0.0.3 area 0
+ network 10.0.0.24 0.0.0.3 area 0
+!
+end
+write memory
+-----------------------------------
