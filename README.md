@@ -30,59 +30,6 @@ Submitted By:
 ### 
 
 Submission Date: *14/09/2025*  
-**Table Of Contents**
-
-[**1\. Introduction	2**](#1.-introduction)
-
-[**2\. Purpose of the Network	2**](#2.-purpose-of-the-network)
-
-[**3\. Physical Topology	2**](#3.-physical-topology)
-
-[Est. Router Connections Table (Topology)	3](#est.-router-connections-table-\(topology\))
-
-[**4\. IP Addressing Scheme	4**](#4.-ip-addressing-scheme)
-
-[4.1 LAN Subnets	4](#4.1-lan-subnets)
-
-[4.2 Server IPs	5](#4.2-server-ips)
-
-[4.3 Router Interconnections	5](#4.3-router-interconnections)
-
-[4.3.1 Serial Point-to-Point Links	5](#4.3.1-serial-point-to-point-links)
-
-[4.4 Routing Protocol	6](#4.4-routing-protocol)
-
-[**5\. Router Configurations	7**](#5.-router-configurations)
-
-[Sample Configuration Brief:	11](#sample-configuration-brief:)
-
-[**6\. Server Configurations	12**](#6.-server-configurations)
-
-[6.1 DHCP Server	12](#6.1-dhcp-server)
-
-[6.2 DNS Server	14](#6.2-dns-server)
-
-[Purpose	14](#purpose)
-
-[6.3 Web Server	15](#6.3-web-server)
-
-[**8\. Verification	16**](#8.-verification)
-
-[Testing	17](#testing)
-
-[**9\. Limitations	18**](#9.-limitations)
-
-[**10\. Future Scope	18**](#10.-future-scope)
-
-[**11\. Conclusion	18**](#11.-conclusion)
-
-## 
-
-## 
-
-## 
-
-## 
 
 ## **1\. Introduction** {#1.-introduction}
 
