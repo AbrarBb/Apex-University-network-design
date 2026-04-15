@@ -21,7 +21,7 @@ Submitted By:
 
 |  Name | ID |
 | :---: | :---: |
-| Abrar Khatib Lajim | 2022-3-60-043 |
+| Abrar Khatib Lajim |
 
 ### 
 
